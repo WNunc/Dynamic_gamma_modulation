@@ -1,0 +1,174 @@
+% plot bar plot
+close all
+peakFR = [21.1807292267244	12.6225868908516
+12.5843101460684	7.25665942630842
+18.8595344906316	13.5096715025484
+16.9460018266021	12.0686713890555
+11.5106509325846	8.09189160905032
+8.0822768093348	7.93134188000878
+12.968545933892	9.34224006868451
+13.1854714940779	8.55456223359727
+7.47822212779723	5.24845441285737
+7.88302298256078	5.77042214130524
+7.14623959310194	6.41620358650814];
+color = {'#F24444','#F2CA50'};
+figure('Position', [1179 316 283 278])
+for x = 1:2
+[bar,er] = barwitherror(x,peakFR(:,x));
+bar.FaceColor = color{x};
+hold on
+end
+hold off
+xticks([1,2])
+xticklabels({'fg cell','nfg cell'})
+set(gca,'FontSize',14)
+ylim([0,15])
+ylabel('Peak fire rate (Hz)')
+saveas(gcf,'peakFR_insession','epsc')
+saveas(gcf,'peakFR_insession.png')
+
+
+meanFR_ot = [1.36714324103682	0.71279170774278
+2.47116093455433	1.74722178771024
+1.54741816835514	0.822600298604462
+2.05343473495982	1.74582898955167
+2.38071406385343	1.75629511266051
+1.80422200915509	1.2848796528689
+1.32773275301037	1.08249013417623
+1.96316050071288	1.43856997006264
+2.54709557771743	1.43024170586167
+0.689132050564862	0.670699701037505
+0.701361908167473	0.832743577437126
+1.11066450960687	0.768420053929531];
+color = {'#F24444','#F2CA50'};
+figure('Position', [1179 316 283 278])
+for x = 1:2
+[bar,er] = barwitherror(x,meanFR_ot(:,x));
+bar.FaceColor = color{x};
+hold on
+end
+hold off
+xticks([1,2])
+xticklabels({'fg cell','nfg cell'})
+set(gca,'FontSize',14)
+ylim([0,3])
+ylabel('Mean fire rate on track (Hz)')
+saveas(gcf,'meanFR_ot_insession','epsc')
+saveas(gcf,'meanFR_ot_insession.png')
+
+
+
+meanFR_if = [4.87837190407333	3.23955988715988
+9.14236982627385	5.61355136339522
+5.72155138317167	4.29120286835349
+8.4882119392169	6.93425649624824
+8.15889311719151	5.71983781881481
+5.14562765037847	4.38038547662252
+3.89288484727477	4.42977668535188
+5.81993748544377	3.83271638590939
+5.27783693748842	5.06666452831244
+4.16900653034257	1.73025798118403
+3.69714576655115	2.12335983148978
+3.49765667859905	3.92735794366934];
+color = {'#F24444','#F2CA50'};
+figure('Position', [1179 316 283 278])
+for x = 1:2
+[bar,er] = barwitherror(x,meanFR_if(:,x));
+bar.FaceColor = color{x};
+hold on
+end
+hold off
+xticks([1,2])
+xticklabels({'fg cell','nfg cell'})
+set(gca,'FontSize',14)
+ylim([0,8])
+ylabel('Mean fire rate in field (Hz)')
+saveas(gcf,'meanFR_if_insession','epsc')
+saveas(gcf,'meanFR_if_insession.png')
+
+fsize = [1.5658096717892	1.52092977673792
+1.8151424220741	2.18747932916623
+1.7389826001689	1.28202366873765
+1.61966554585074	1.88495559215388
+2.05250720034533	2.16420827247297
+1.80044491258362	1.93639687537055
+1.74067504065568	1.57312343246422
+1.99466200227923	1.52591643174361
+2.99033078508362	1.94313323388702
+0.872664625997165	1.13446401379631
+1.17685058134475	1.02725093117381
+1.70044935694305	1.44612995165244];
+color = {'#F24444','#F2CA50'};
+figure('Position', [1179 316 283 278])
+for x = 1:2
+[bar,er] = barwitherror(x,fsize(:,x));
+bar.FaceColor = color{x};
+hold on
+end
+hold off
+xticks([1,2])
+xticklabels({'fg cell','nfg cell'})
+set(gca,'FontSize',14)
+ylim([0,3])
+ylabel('Place field size (rad)')
+saveas(gcf,'fsize_insession','epsc')
+saveas(gcf,'fsize_insession.png')
+
+spinfo = [1.64631771492768	1.06449131957677
+0.995459103638193	0.367179394448475
+1.17622550708156	1.25116372024682
+0.644396681995107	0.675024536422547
+0.686947277864526	0.659296084472312
+1.67392506103999	1.03914681014413
+1.28883546127699	1.27493563037193
+0.88101295009781	1.4392146829949
+1.17180817043284	1.31765942974979
+2.38261756572267	1.15877086073724
+1.20045689413672	1.13135980624772
+1.7524459116354	1.83887029574374];
+color = {'#F24444','#F2CA50'};
+figure('Position', [1179 316 283 278])
+for x = 1:2
+[bar,er] = barwitherror(x,spinfo(:,x));
+bar.FaceColor = color{x};
+hold on
+end
+hold off
+xticks([1,2])
+xticklabels({'fg cell','nfg cell'})
+set(gca,'FontSize',14)
+ylim([0,2])
+ylabel('Spatial information (bit/spike)')
+saveas(gcf,'spatialinfo_insession','epsc')
+saveas(gcf,'spatialinfo_insession.png')
+
+spkN = [4943	1670
+2472	750
+3445	1638
+859	1134
+1256	847
+6686	4324
+5157	4291
+2028	1658
+4384	1647
+802	688
+1087	2148
+5625	3158];
+color = {'#F24444','#F2CA50'};
+figure('Position', [1179 316 283 278])
+for x = 1:2
+[bar,er] = barwitherror(x,spkN(:,x));
+bar.FaceColor = color{x};
+hold on
+end
+hold off
+xticks([1,2])
+xticklabels({'fg cell','nfg cell'})
+set(gca,'FontSize',14)
+ax = gca;
+ax.YAxis.Exponent = 3;
+ylim([0,5000])
+ylabel('Spike number')
+saveas(gcf,'spkN_insession','epsc')
+saveas(gcf,'spkN_insession.png')
+
